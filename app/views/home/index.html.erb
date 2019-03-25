@@ -1,0 +1,19 @@
+<%=form_tag home_index_path,multipart:true do%>
+<%=file_field_tag :file%>
+<%=submit_tag ("importcsv")%>
+<%end%>
+<table>
+<th>rollno</th>
+<th>name</th>
+<th>grade</th>
+<th>branch</th>
+<tr>
+<%@s.each do |s|%>
+<td><%=s.rollno%></td>
+<td><%=s.name%></td>
+<td><%=s.grade%></td>
+<td><%=s.branch%></td>
+</tr>
+<%end%>
+</table>
+
